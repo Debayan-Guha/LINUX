@@ -660,63 +660,49 @@
 ## 21.1 Filesystem & File Operations Labs
 
 
-
 ### 21.1.1 Create and Navigate Directory Structure
 
-21.1.1.1 Create the following directory tree under `/tmp/devops-lab/`:
+[21.1.1.1 Create directory tree `/tmp/devops-lab/project/` with subdirectories `src/`, `logs/`, `backup/`, `config/`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21111-create-directory-tree-tmpdevops-labproject-with-subdirectories-src-logs-backup-config)
 
-- `project/`
+[21.1.1.2 Navigate into `project/src/` using absolute path](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21112-navigate-into-projectsrc-using-absolute-path)
 
-  - `src/`
-  
-  - `logs/`
-  
-  - `backup/`
-  
-  - `config/`
-  
-21.1.1.2 Navigate into `project/src/` using absolute path
+[21.1.1.3 Navigate back to `project/` using relative path](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21113-navigate-back-to-project-using-relative-path)
 
-21.1.1.3 Navigate back to `project/` using relative path
+[21.1.1.4 Print current working directory at each step](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21114-print-current-working-directory-at-each-step)
 
-21.1.1.4 Print current working directory at each step
+[21.1.1.5 Create empty files: `app.py`, `Dockerfile`, `nginx.conf` inside `config/`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21115-create-empty-files-apppy-dockerfile-nginxconf-inside-config)
 
-21.1.1.5 Create empty files: `app.py`, `Dockerfile`, `nginx.conf` inside `config/`
+[21.1.1.6 Copy `nginx.conf` to `backup/nginx.conf.bak`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21116-copy-nginxconf-to-backupnginxconfbak)
 
-21.1.1.6 Copy `nginx.conf` to `backup/nginx.conf.bak`
+[21.1.1.7 Move `app.py` to `src/app.py`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21117-move-apppy-to-srcapppy)
 
-21.1.1.7 Move `app.py` to `src/app.py`
+[21.1.1.8 Create a symbolic link `config/nginx-link.conf` pointing to `config/nginx.conf`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21118-create-a-symbolic-link-confignginx-linkconf-pointing-to-confignginxconf)
 
-21.1.1.8 Create a symbolic link `config/nginx-link.conf` pointing to `config/nginx.conf`
+[21.1.1.9 Delete the `logs/` directory (which is empty at this point)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21119-delete-the-logs-directory-which-is-empty-at-this-point)
 
-21.1.1.9 Delete the `logs/` directory (which is empty at this point)
-
-21.1.1.10 Verify the final directory structure using `tree` or `find`
-
-
+[21.1.1.10 Verify the final directory structure using `tree` or `find`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#211110-verify-the-final-directory-structure-using-tree-or-find)
 
 ### 21.1.2 File Permissions Lab
 
-21.1.2.1 Create a file `secret.sh` with content `#!/bin/bash\necho "Hello"`
+[21.1.2.1 Create a file `secret.sh` with content `#!/bin/bash\necho "Hello"`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21121-create-a-file-secretsh-with-content-binbashecho-hello)
 
-21.1.2.2 Set permission so only owner can read, write, and execute (700)
+[21.1.2.2 Set permission so only owner can read, write, and execute (700)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21122-set-permission-so-only-owner-can-read-write-and-execute-700)
 
-21.1.2.3 Create another file `team.sh` with same content
+[21.1.2.3 Create another file `team.sh` with same content](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21123-create-another-file-teamsh-with-same-content)
 
-21.1.2.4 Change group ownership to a group that exists on your system
+[21.1.2.4 Change group ownership to a group that exists on your system](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21124-change-group-ownership-to-a-group-that-exists-on-your-system)
 
-21.1.2.5 Set permission so group can read and execute (750)
+[21.1.2.5 Set permission so group can read and execute (750)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21125-set-permission-so-group-can-read-and-execute-750)
 
-21.1.2.6 Create a directory `shared/` with sticky bit (1777)
+[21.1.2.6 Create a directory shared/ with sticky bit (1777)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21126-create-a-directory-shared-with-sticky-bit-1777)
 
-21.1.2.7 Create a file `suid-binary` and set SUID bit (4755)
+[21.1.2.7 Create a file suid-binary and set SUID bit (4755)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21127-create-a-file-suid-binary-and-set-suid-bit-4755)
 
-21.1.2.8 Verify all permissions using `ls -l`
+[21.1.2.8 Verify all permissions using `ls -l`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21128-verify-all-permissions-using-ls--l)
 
-21.1.2.9 Try to execute `secret.sh` as a different user (observe permission denied)
+[21.1.2.9 Try to execute secret.sh as a different user (observe permission denied)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21129-try-to-execute-secretsh-as-a-different-user-observe-permission-denied)
 
-21.1.2.10 Remove all created files and directories
-
+[21.1.2.10 Remove all created files and directories](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#211210-remove-all-created-files-and-directories)
 
 
 ### 21.1.3 Find Files Lab
