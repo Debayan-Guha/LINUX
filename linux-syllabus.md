@@ -21,51 +21,86 @@
 1.2.6 Distribution-agnostic DevOps skills  
 
 ## 1.3 Filesystem Hierarchy Standard (FHS)
-1.3.1 `/` (root directory) purpose  
-1.3.2 `/bin` vs `/sbin` vs `/usr/bin`  
-1.3.3 `/etc` (configuration files)  
-1.3.4 `/var` (variable data: logs, spool)  
-1.3.5 `/tmp` (temporary files)  
-1.3.6 `/home` vs `/root`  
-1.3.7 `/proc` and `/sys` (virtual filesystems)  
-1.3.8 `/mnt` vs `/media` (mount points)  
-1.3.9 `/opt` (optional software)  
+
+[1.3.1 `/` (root directory) purpose](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#131--root-directory-purpose)
+
+[1.3.2 `/bin` vs `/sbin` vs `/usr/bin`](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#132-bin-vs-sbin-vs-usrbin)
+
+[1.3.3 `/etc` (configuration files)](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#133-etc-configuration-files)
+
+[1.3.4 `/var` (variable data: logs, spool)](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#134-var-variable-data-logs-spool)
+
+[1.3.5 `/tmp` (temporary files)](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#135-tmp-temporary-files)
+
+[1.3.6 `/home` vs `/root`](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#136-home-vs-root)
+
+[1.3.7 `/proc` and `/sys` (virtual filesystems)](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#137-proc-and-sys-virtual-filesystems)
+
+[1.3.8 `/mnt` vs `/media` (mount points)](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#138-mnt-vs-media-mount-points)
+
+[1.3.9 `/opt` (optional software)](linux-syllabus-sol/1.LINUX%20FUNDAMENTALS%20(CORE%20CONCEPTS).md#139-opt-optional-software)
 
 ---
 
 # 2. ESSENTIAL LINUX COMMANDS (DAY-TO-DAY OPS)
 
 ## 2.1 File & Directory Operations
-2.1.1 `ls` (list files with options: -l, -a, -h, -R)  
-2.1.2 `cd` (change directory, absolute vs relative paths)  
-2.1.3 `pwd` (print working directory)  
-2.1.4 `mkdir` (create directories, -p for parents)  
-2.1.5 `rmdir` vs `rm -rf` (remove directories)  
-2.1.6 `touch` (create empty file, update timestamp)  
-2.1.7 `cp` (copy files/directories, -r, -p, -a)  
-2.1.8 `mv` (move/rename files and directories)  
-2.1.9 `rm` (remove files, -i, -f, -r flags)  
-2.1.10 `ln` (hard links vs soft/symbolic links)  
+
+[2.1.1 `ls` (list files with options: -l, -a, -h, -R)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#211-ls-list-files-with-options--l--a--h--r)
+
+[2.1.2 `cd` (change directory, absolute vs relative paths)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#212-cd-change-directory-absolute-vs-relative-paths)
+
+2.1.3 `pwd` (print working directory)
+
+[2.1.4 `mkdir` (create directories, -p for parents)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#214-mkdir-create-directories--p-for-parents)
+
+[2.1.5 `rmdir` vs `rm -rf` (remove directories)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#215-rmdir-vs-rm--rf-remove-directories)
+
+2.1.6 `touch` (create empty file, update timestamp)
+
+2.1.7 `cp` (copy files/directories, -r, -p, -a)
+
+2.1.8 `mv` (move/rename files and directories)
+
+[2.1.9 `rm` (remove files, -i, -f, -r flags)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#219-rm-remove-files--i--f--r-flags)
+
+[2.1.10 `ln` (hard links vs soft/symbolic links)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#2110-ln-hard-links-vs-softsymbolic-links)
 
 ## 2.2 File Viewing & Inspection
-2.2.1 `cat` (concatenate and display files)  
-2.2.2 `less` vs `more` (pagination)  
-2.2.3 `head` and `tail` (top/bottom of files)  
-2.2.4 `tail -f` (real-time log following)  
-2.2.5 `nl` (number lines in files)  
-2.2.6 `tac` (reverse order output)  
-2.2.7 `wc` (count lines, words, characters)  
-2.2.8 `file` (determine file type)  
+
+2.2.1 `cat` (concatenate and display files)
+
+[2.2.2 `less` vs `more` (pagination)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#222-less-vs-more-pagination)
+
+[2.2.3 `head` and `tail` (top/bottom of files)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#223-head-and-tail-topbottom-of-files)
+
+[2.2.4 `tail -f` (real-time log following)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#224-tail-ffollow-file-real-time-log-following)
+
+[2.2.5 `nl` (number lines in files)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#225-nl-number-lines-in-files)
+
+[2.2.6 `tac` (reverse order output)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#226-tac-reverse-order-output)
+
+[2.2.7 `wc` (count lines, words, characters)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#227-wc-count-lines-words-characters)
+
+[2.2.8 `file` (determine file type)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#228-file-determine-file-type)
 
 ## 2.3 File Permissions & Ownership
-2.3.1 Understanding `rwx` permissions (read, write, execute)  
-2.3.2 User (u), Group (g), Others (o) concept  
-2.3.3 `chmod` with symbolic (u+x) and octal (755) modes  
-2.3.4 `chown` (change file owner and group)  
-2.3.5 `chgrp` (change group ownership)  
-2.3.6 Special permissions: SUID (4), SGID (2), Sticky Bit (1)  
-2.3.7 Understanding `umask` (default permission mask)  
-2.3.8 ACLs (Access Control Lists) with `getfacl`/`setfacl`  
+
+[2.3.1 Understanding `rwx` permissions (read, write, execute)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#231-understanding-rwx-permissions-read-write-execute)
+
+[2.3.2 User (u), Group (g), Others (o) concept](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#232-user-u-group-g-others-o-concept)
+
+[2.3.3 `chmod` with symbolic (u+x) and octal (755) modes](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#233-chmod-with-symbolic-ux-and-octal-755-modes)
+
+[2.3.4 `chown` (change file owner and group)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#234-chown-change-file-owner-and-group)
+
+[2.3.5 `chgrp` (change group ownership)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#235-chgrp-change-group-ownership)
+
+[2.3.6 Special permissions: SUID (4), SGID (2), Sticky Bit (1)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#236-special-permissions-suid-4-sgid-2-sticky-bit-1)
+
+[2.3.7 Understanding `umask` (default permission mask)](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#237-understanding-umask-default-permission-mask)
+
+[2.3.8 ACLs (Access Control Lists) with `getfacl`/`setfacl`](linux-syllabus-sol/2.%20ESSENTIAL%20LINUX%20COMMANDS%20(DAY-TO-DAY%20OPS).md#238-acls-access-control-lists-with-getfaclsetfacl)
 
 ## 2.4 Finding Files & Directories
 2.4.1 `find` command (search by name, type, size, time)  
