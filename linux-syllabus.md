@@ -742,15 +742,15 @@
 
 ### 21.1.3 Find Files Lab
 
-21.1.3.1 Create 10 files with `.log` extension in `/tmp/find-lab/` with names `app1.log` to `app10.log`
+[21.1.3.1 Create 10 files with `.log` extension in `/tmp/find-lab/` with names `app1.log` to `app10.log`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21131-create-10-files-with-log-extension-in-tmpfind-lab-with-names-app1log-to-app10log)
 
-21.1.3.2 Set different modification dates using `touch -t`
+[21.1.3.2 Set different modification dates using `touch -t`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21132-set-different-modification-dates-using-touch--t)
 
-21.1.3.3 Find all `.log` files modified in the last 1 hour
+[21.1.3.3 Find all `.log` files modified in the last 1 hour](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21133-find-all-log-files-modified-in-the-last-1-hour)
 
-21.1.3.4 Find all `.log` files larger than 1KB
+[21.1.3.4 Find all `.log` files larger than 1KB](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21134-find-all-log-files-larger-than-1kb)
 
-21.1.3.5 Find and delete all `.tmp` files in one command
+[21.1.3.5 Find and delete all `.tmp` files in one command](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21135-find-and-delete-all-tmp-files-in-one-command)
 
 21.1.3.6 Find all empty directories under `/tmp/`
 
@@ -774,49 +774,47 @@
 
 ### 21.2.1 grep Lab
 
-21.2.1.1 Create a log file `sample.log` with mixed content containing INFO, WARN, ERROR levels
+[21.2.1.1 Create a log file `sample.log` with mixed content containing INFO, WARN, ERROR levels](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21211-create-a-log-file-samplelog-with-mixed-content-containing-info-warn-error-levels)
 
-21.2.1.2 Extract all lines containing "ERROR" (case-sensitive)
+[21.2.1.2 Extract all lines containing "ERROR" (case-sensitive)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21212-extract-all-lines-containing-error-case-sensitive)
 
-21.2.1.3 Extract all lines containing "error" (case-insensitive)
+[21.2.1.3 Extract all lines containing "error" (case-insensitive)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21213-extract-all-lines-containing-error-case-insensitive)
 
-21.2.1.4 Extract all lines NOT containing "INFO"
+[21.2.1.4 Extract all lines NOT containing "INFO"](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21214-extract-all-lines-not-containing-info)
 
-21.2.1.5 Extract all lines containing "ERROR" and show line numbers
+[21.2.1.5 Extract all lines containing "ERROR" and show line numbers](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21215-extract-all-lines-containing-error-and-show-line-numbers)
 
-21.2.1.6 Extract all lines containing "ERROR" and show 2 lines before and 1 line after
+[21.2.1.6 Extract all lines containing "ERROR" and show 2 lines before and 1 line after](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21216-extract-all-lines-containing-error-and-show-2-lines-before-and-1-line-after)
 
-21.2.1.7 Count how many lines contain "WARN"
+[21.2.1.7 Count how many lines contain "WARN"](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21217-count-how-many-lines-contain-warn)
 
-21.2.1.8 Extract all IP addresses from the log file using regex
+[21.2.1.8 Extract all IP addresses from the log file using regex](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21218-extract-all-ip-addresses-from-the-log-file-using-regex)
 
-21.2.1.9 Extract all email addresses from a dummy text file
+[21.2.1.9 Extract all email addresses from a dummy text file](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21219-extract-all-email-addresses-from-a-dummy-text-file)
 
 21.2.1.10 Recursively search for the word "TODO" in all `.py` files under a directory
 
-
-
 ### 21.2.2 sed Lab
 
-21.2.2.1 Create `config.txt` with `port=8080` and change it to `port=9090` using sed (dry run first)
+[21.2.2.1 Create `config.txt` with `port=8080` and change it to `port=9090` using sed (dry run first)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21221-create-configtxt-with-port8080-and-change-it-to-port9090-using-sed-dry-run-first)
 
-21.2.2.2 Edit `config.txt` in-place to change the port
+[21.2.2.2 Edit `config.txt` in-place to change the port](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21222-edit-configtxt-in-place-to-change-the-port)
 
-21.2.2.3 Delete all empty lines from a file
+[21.2.2.3 Delete all empty lines from a file](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21223-delete-all-empty-lines-from-a-file)
 
-21.2.2.4 Delete all lines starting with `#` (comments) from a file
+[21.2.2.4 Delete all lines starting with `#` (comments) from a file](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21224-delete-all-lines-starting-with--comments-from-a-file)
 
-21.2.2.5 Append a line "Log rotation completed" after every line containing "ERROR"
+[21.2.2.5 Append a line "Log rotation completed" after every line containing "ERROR"](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21225-append-a-line-log-rotation-completed-after-every-line-containing-error)
 
-21.2.2.6 Change date format from `YYYY-MM-DD` to `DD/MM/YYYY` in a file
+[21.2.2.6 Change date format from `YYYY-MM-DD` to `DD/MM/YYYY` in a file](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21226-change-date-format-from-yyyy-mm-dd-to-ddmm-yyyy-in-a-file)
 
-21.2.2.7 Remove trailing whitespace from all lines
+[21.2.2.7 Remove trailing whitespace from all lines](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21227-remove-trailing-whitespace-from-all-lines)
 
-21.2.2.8 Replace all occurrences of `localhost` with `127.0.0.1` in a file
+[21.2.2.8 Replace all occurrences of localhost with `127.0.0.1` in a file](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21228-replace-all-occurrences-of-localhost-with-127001-in-a-file)
 
-21.2.2.9 Extract only lines 50-100 from a large log file
+[21.2.2.9 Extract only lines 50-100 from a large log file](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#21229-extract-only-lines-50-100-from-a-large-log-file)
 
-21.2.2.10 Combine multiple sed commands using `-e` or `;`
+[21.2.2.10 Combine multiple `sed` commands using `-e` or `;`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.1%20Filesystem%20&%20File%20Operations%20Labs.md#212210-combine-multiple-sed-commands-using--e-or-)
 
 
 
