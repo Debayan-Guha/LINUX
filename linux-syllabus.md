@@ -900,7 +900,7 @@
 
 ### 21.3.2 Controlling Processes
 
-21.3.2.1 Start a long-running command (e.g., `ping google.com`) and suspend it using `Ctrl+Z`
+21.3.2.1 Start a long-running command (e.g., `sleep 1000`) and suspend it using `Ctrl+Z`
 
 21.3.2.2 View background jobs using `jobs`
 
@@ -914,11 +914,12 @@
 
 21.3.2.7 Kill a process using SIGKILL and observe the difference
 
-21.3.2.8 Use `killall` to kill all `ping` processes
+21.3.2.8 Use `killall` to kill all `sleep` processes
 
-21.3.2.9 Use `pkill -f "ping google.com"` to kill by command pattern
+21.3.2.9 Use `pkill -f "sleep 1000"` to kill by command pattern
 
 21.3.2.10 Start a process with lower priority using `nice`
+
 
 
 
