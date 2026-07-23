@@ -1032,7 +1032,7 @@
 
 [21.5.1.9 Check login history: `last` and `lastlog`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21519-check-login-history-last-and-lastlog)
 
-[21.5.1.10 See currently logged in users: `who`, `w`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#215110-see-currently-logged-in-users-who-w)
+
 
 ### 21.5.2 Group Management Lab
 
