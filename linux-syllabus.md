@@ -872,72 +872,65 @@
 
 ## 21.3 Process Management Labs
 
-
-
 ### 21.3.1 Viewing and Monitoring Processes
 
-21.3.1.1 Run `sleep 300` in the background
+[21.3.1.1 Run `sleep 300` in the background](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21311-run-sleep-300-in-the-background)
 
-21.3.1.2 Use `ps aux` to find the PID of that `sleep` process
+[21.3.1.2 Use `ps aux` to find the PID of that `sleep` process](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21312-use-ps-aux-to-find-the-pid-of-that-sleep-process)
 
-21.3.1.3 Use `pgrep` to find the same PID
+[21.3.1.3 Use `pgrep` to find the same PID](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21313-use-pgrep-to-find-the-same-pid)
 
-21.3.1.4 Run `top` and sort by memory usage (press `M` key)
+[21.3.1.4 Run `top` and sort by memory usage (press M key)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21314-run-top-and-sort-by-memory-usage-press-m-key)
 
-21.3.1.5 Run `htop` (install if missing) and kill a process from the UI
+[21.3.1.5 Run `htop` (install if missing) and kill a process from the UI](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21315-run-htop-install-if-missing-and-kill-a-process-from-the-ui)
 
-21.3.1.6 Use `ps auxf` to view process tree
+[21.3.1.6 Use `ps auxf` to view process tree](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21316-use-ps-auxf-to-view-process-tree)
 
-21.3.1.7 Identify the parent PID (PPID) of your shell
+[21.3.1.7 Identify the parent PID (PPID) of your shell](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21317-identify-the-parent-pid-ppid-of-your-shell)
 
-21.3.1.8 List all processes owned by `root`
+[21.3.1.8 List all processes owned by `root`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21318-list-all-processes-owned-by-root)
 
-21.3.1.9 Use `ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu` to see CPU hogs
+[21.3.1.9 Use `ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu` to see CPU hogs](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21319-use-ps--eo-pidppidcmdmemcpu--sort-cpu-to-see-cpu-hogs)
 
-21.3.1.10 Observe process state (R, S, D, Z) using `ps`
-
-
+[21.3.1.10 Observe process state (R, S, D, Z) using `ps`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#213110-observe-process-state-r-s-d-z-using-ps)
 
 ### 21.3.2 Controlling Processes
 
-21.3.2.1 Start a long-running command (e.g., `sleep 1000`) and suspend it using `Ctrl+Z`
+[21.3.2.1 Start a long-running command (e.g., `sleep 1000`) and suspend it using `Ctrl+Z`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21321-start-a-long-running-command-eg-sleep-1000-and-suspend-it-using-ctrlz)
 
-21.3.2.2 View background jobs using `jobs`
+[21.3.2.2 View background jobs using `jobs`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21322-view-background-jobs-using-jobs)
 
-21.3.2.3 Resume the job in the background using `bg`
+[21.3.2.3 Resume the job in the background using `bg`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21323-resume-the-job-in-the-background-using-bg)
 
-21.3.2.4 Bring the job back to foreground using `fg`
+[21.3.2.4 Bring the job back to foreground using `fg`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21324-bring-the-job-back-to-foreground-using-fg)
 
-21.3.2.5 Start a process with `&` to run in background directly
+[21.3.2.5 Start a process with `&` to run in background directly](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21325-start-a-process-with--to-run-in-background-directly)
 
-21.3.2.6 Kill a process using its PID with SIGTERM
+[21.3.2.6 Kill a process using its PID with SIGTERM](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21326-kill-a-process-using-its-pid-with-sigterm)
 
-21.3.2.7 Kill a process using SIGKILL and observe the difference
+[21.3.2.7 Kill a process using SIGKILL and observe the difference](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21327-kill-a-process-using-sigkill-and-observe-the-difference)
 
-21.3.2.8 Use `killall` to kill all `sleep` processes
+[21.3.2.8 Use `killall` to kill all `sleep` processes](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21328-use-killall-to-kill-all-sleep-processes)
 
-21.3.2.9 Use `pkill -f "sleep 1000"` to kill by command pattern
+[21.3.2.9 Use `pkill -f "sleep 1000"` to kill by command pattern](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21329-use-pkill--f-sleep-1000-to-kill-by-command-pattern)
 
-21.3.2.10 Start a process with lower priority using `nice`
-
-
-
+[21.3.2.10 Start a process with lower priority using `nice`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#213210-start-a-process-with-lower-priority-using-nice)
 
 ### 21.3.3 Process Debugging Lab
 
-21.3.3.1 Write a simple Python script that runs an infinite loop
+[21.3.3.1 Write a simple Python script that runs an infinite loop](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21331-write-a-simple-python-script-that-runs-an-infinite-loop)
 
-21.3.3.2 Run it and use `strace -p <PID>` to see system calls
+[21.3.3.2 Run it and use `strace -p <PID>` to see system calls](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21332-run-it-and-use-strace--p-pid-to-see-system-calls)
 
-21.3.3.3 Use `lsof -p <PID>` to see all open files and network connections
+[21.3.3.3 Use `lsof -p <PID>` to see all open files and network connections](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21333-use-lsof--p-pid-to-see-all-open-files-and-network-connections)
 
-21.3.3.4 Explore `/proc/<PID>/` directory (cat `status`, `cmdline`, `environ`)
+[21.3.3.4 Explore `/proc/<PID>/` directory (cat `status`, `cmdline`, `environ`)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21334-explore-procpid-directory-cat-status-cmdline-environ)
 
-21.3.3.5 Set `ulimit -n 100` and test file descriptor limit
+[21.3.3.5 Set `ulimit -n 100` and test file descriptor limit](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21335-set-ulimit--n-100-and-test-file-descriptor-limit)
 
-21.3.3.6 Create a process that runs after terminal closes using `nohup`
+[21.3.3.6 Create a process that runs after terminal closes using `nohup`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21336-create-a-process-that-runs-after-terminal-closes-using-nohup)
 
-21.3.3.7 Detach a running process using `disown`
+[21.3.3.7 Detach a running process using `disown`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21337-detach-a-running-process-using-disown)
 
 21.3.3.8 Create a zombie process (fork child that exits but parent doesn't wait)
 
@@ -945,63 +938,53 @@
 
 21.3.3.10 Clean up zombie process by killing parent
 
-
-
 ---
-
-
 
 ## 21.4 Memory & Disk Management Labs
 
-
-
 ### 21.4.1 Memory Monitoring Lab
 
-21.4.1.1 Run `free -h` and identify total, used, available memory
+[21.4.1.1 Run `free -h` and identify total, used, available memory](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21411-run-free--h-and-identify-total-used-available-memory)
 
-21.4.1.2 Run `vmstat 2 5` and understand each column (r, b, si, so, us, sy, id)
+[21.4.1.2 Run `vmstat 2 5` and understand each column (r, b, si, so, us, sy, id)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21412-run-vmstat-2-5-and-understand-each-column-r-b-si-so-us-sy-id)
 
-21.4.1.3 Use `top` to sort by memory usage (press `M`)
+[21.4.1.3 Use `top` to sort by memory usage (press `M`)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21413-use-top-to-sort-by-memory-usage-press-m)
 
-21.4.1.4 Check swap usage: `swapon --show`
+[21.4.1.4 Check swap usage: `swapon --show`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21414-check-swap-usage-swapon---show)
 
 21.4.1.5 Create a 256MB swap file and enable it (then disable and remove)
 
-21.4.1.6 View detailed memory info: `cat /proc/meminfo`
+[21.4.1.6 View detailed memory info: `cat /proc/meminfo`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21416-view-detailed-memory-info-cat-procmeminfo)
 
 21.4.1.7 Check for OOM killer events: `dmesg | grep -i "oom" | tail -10`
 
-21.4.1.8 Run `stress --vm 1 --vm-bytes 512M` to simulate memory pressure
+[21.4.1.8 Run `stress --vm 1 --vm-bytes 512M` to simulate memory pressure](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21418-run-stress---vm-1---vm-bytes-512m-to-simulate-memory-pressure)
 
-21.4.1.9 While stress runs, monitor with `free` and `vmstat`
+[21.4.1.9 While stress runs, monitor with `free` and `vmstat`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21419-while-stress-runs-monitor-with-free-and-vmstat)
 
-21.4.1.10 Clear page cache: `sync && echo 3 | sudo tee /proc/sys/vm/drop_caches`
-
-
+[21.4.1.10 Clear page cache: `sync && echo 3 | sudo tee /proc/sys/vm/drop_caches`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#214110-clear-page-cache-sync--echo-3--sudo-tee-procsysvmdrop_caches)
 
 ### 21.4.2 Disk Usage Lab
 
-21.4.2.1 Run `df -h` and identify filesystems with high usage
+[21.4.2.1 Run `df -h` and identify filesystems with high usage](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21421-run-df--h-and-identify-filesystems-with-high-usage)
 
-21.4.2.2 Run `df -i` to check inode usage
+[21.4.2.2 Run `df -i` to check inode usage](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21422-run-df--i-to-check-inode-usage)
 
-21.4.2.3 Create 100,000 small files in a directory and check inode usage
+[21.4.2.3 Create 100,000 small files in a directory and check inode usage](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21423-create-100000-small-files-in-a-directory-and-check-inode-usage)
 
 21.4.2.4 Find the largest directory under `/var` using `du -sh /var/* | sort -h`
 
-21.4.2.5 Run `ncdu` (install if needed) and navigate through the filesystem
+[21.4.2.5 Run `ncdu` (install if needed) and navigate through the filesystem](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21425-run-ncdu-install-if-needed-and-navigate-through-the-filesystem)
 
-21.4.2.6 Identify which files are consuming most space in `/tmp`
+[21.4.2.6 Identify which files are consuming most space in `/tmp`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21426-identify-which-files-are-consuming-most-space-in-tmp)
 
-21.4.2.7 List block devices: `lsblk`
+[21.4.2.7 List block devices: `lsblk`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21427-list-block-devices-lsblk)
 
-21.4.2.8 Mount a new temporary filesystem: `sudo mount -t tmpfs tmpfs /mnt/tmp`
+[21.4.2.8 Mount a new temporary filesystem: `sudo mount -t tmpfs tmpfs /mnt/tmp`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21428-mount-a-new-temporary-filesystem-sudo-mount--t-tmpfs-tmpfs-mnttmp)
 
-21.4.2.9 Check `/etc/fstab` to understand persistent mounts
+[21.4.2.9 Check `/etc/fstab` to understand persistent mounts](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#21429-check-etcfstab-to-understand-persistent-mounts)
 
-21.4.2.10 Unmount the temporary filesystem
-
-
+[21.4.2.10 Unmount the temporary filesystem](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.4%20Memory%20&%20Disk%20Management%20Labs.md#214210-unmount-the-temporary-filesystem)
 
 ### 21.4.3 LVM Lab (Requires spare disk or VM)
 
@@ -1025,85 +1008,76 @@
 
 21.4.3.10 Remove the volume group, physical volume, and logical volume
 
-
-
 ---
-
-
 
 ## 21.5 User & Group Administration Labs
 
-
-
 ### 21.5.1 User Management Lab
 
-21.5.1.1 Create a user `devops_user` with home directory `/home/devops_user`
+[21.5.1.1 Create a user `devops_user` with home directory `/home/devops_user`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21511-create-a-user-devops_user-with-home-directory-homedevops_user)
 
-21.5.1.2 Set password for `devops_user`
+[21.5.1.2 Set password for `devops_user`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21512-set-password-for-devops_user)
 
-21.5.1.3 Create a user `app_user` with no login shell (`/usr/sbin/nologin`)
+[21.5.1.3 Create a user `app_user` with no login shell (`/usr/sbin/nologin`)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21513-create-a-user-app_user-with-no-login-shell-usrsbinnologin)
 
-21.5.1.4 Create a system user `kube` (UID < 1000)
+[21.5.1.4 Create a system user `kube` (UID < 1000)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21514-create-a-system-user-kube-uid--1000)
 
-21.5.1.5 Modify `devops_user` to have expiry date 30 days from now
+[21.5.1.5 Modify `devops_user` to have expiry date 30 days from now](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21515-modify-devops_user-to-have-expiry-date-30-days-from-now)
 
-21.5.1.6 Lock the `app_user` account using `usermod -L`
+[21.5.1.6 Lock the `app_user` account using `usermod -L`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21516-lock-the-app_user-account-using-usermod--l)
 
-21.5.1.7 Verify locked status in `/etc/shadow`
+[21.5.1.7 Verify locked status in `/etc/shadow`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21517-verify-locked-status-in-etcshadow)
 
-21.5.1.8 Delete `app_user` but keep home directory
+[21.5.1.8 Delete `app_user` but keep home directory](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21518-delete-app_user-but-keep-home-directory)
 
-21.5.1.9 Check login history: `last` and `lastlog`
+[21.5.1.9 Check login history: `last` and `lastlog`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21519-check-login-history-last-and-lastlog)
 
-21.5.1.10 See currently logged in users: `who`, `w`
-
-
+[21.5.1.10 See currently logged in users: `who`, `w`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#215110-see-currently-logged-in-users-who-w)
 
 ### 21.5.2 Group Management Lab
 
-21.5.2.1 Create a group `docker`
+[21.5.2.1 Create a group `docker`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21521-create-a-group-docker)
 
-21.5.2.2 Create a group `k8s`
+[21.5.2.2 Create a group `k8s`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21522-create-a-group-k8s)
 
-21.5.2.3 Add `devops_user` to both groups (secondary)
+[21.5.2.3 Add `devops_user` to both groups (secondary)](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21523-add-devops_user-to-both-groups-secondary)
 
-21.5.2.4 Verify group membership: `id devops_user` and `groups devops_user`
+[21.5.2.4 Verify group membership: `id devops_user` and `groups devops_user`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21524-verify-group-membership-id-devops_user-and-groups-devops_user)
 
-21.5.2.5 Change primary group of `devops_user` to `docker`
+[21.5.2.5 Change primary group of `devops_user` to `docker`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21525-change-primary-group-of-devops_user-to-docker)
 
-21.5.2.6 Remove `devops_user` from `k8s` group
+[21.5.2.6 Remove `devops_user` from `k8s` group](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21526-remove-devops_user-from-k8s-group)
 
-21.5.2.7 Delete the `k8s` group
+[21.5.2.7 Delete the k8s group](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21527-delete-the-k8s-group)
 
-21.5.2.8 Create a shared directory `/opt/shared` with SGID so all files inherit group
+[21.5.2.8 Create a shared directory `/opt/shared` with SGID so all files inherit group](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21528-create-a-shared-directory-optshared-with-sgid-so-all-files-inherit-group)
 
-21.5.2.9 Verify SGID works by creating a file in the directory
+[21.5.2.9 Verify SGID works by creating a file in the directory](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21529-verify-sgid-works-by-creating-a-file-in-the-directory)
 
-21.5.2.10 List all groups on system: `cut -d: -f1 /etc/group`
-
-
+[21.5.2.10 List all groups on system: `cut -d: -f1 /etc/group`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#215210-list-all-groups-on-system-cut--d--f1-etcgroup)
 
 ### 21.5.3 Sudo Lab
 
-21.5.3.1 Grant `devops_user` permission to run `systemctl` as root
+[21.5.3.1 Grant `devops_user` permission to run `systemctl` as root](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21531-grant-devops_user-permission-to-run-systemctl-as-root)
 
-21.5.3.2 Grant `devops_user` permission to run `apt update` and `apt upgrade` only
+[21.5.3.2 Grant `devops_user` permission to run `apt update` and `apt upgrade` only](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21532-grant-devops_user-permission-to-run-apt-update-and-apt-upgrade-only)
 
 21.5.3.3 Configure passwordless sudo for `devops_user` for specific commands
 
-21.5.3.4 Test sudo access with `sudo -l`
+[21.5.3.4 Test sudo access with `sudo -l`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21534-test-sudo-access-with-sudo--l)
 
-21.5.3.5 View sudo logs in `/var/log/auth.log`
+[21.5.3.5 View sudo logs in `/var/log/auth.log`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21535-view-sudo-logs-in-varlogauthlog)
 
-21.5.3.6 Create a sudo rule allowing a group `admins` full sudo access
+[21.5.3.6 Create a sudo rule allowing a group `admins` full sudo access](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21536-create-a-sudo-rule-allowing-a-group-admins-full-sudo-access)
 
-21.5.3.7 Set sudo timeout to 15 minutes
+[21.5.3.7 Set sudo timeout to 15 minutes](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#21537-set-sudo-timeout-to-15-minutes)
 
 21.5.3.8 Prevent sudo from asking for password for certain commands
 
 21.5.3.9 Use `visudo` to validate syntax before saving
 
-21.5.3.10 Switch to a user: `sudo -u devops_user bash`
+[21.5.3.10 Switch to a user: `sudo -u devops_user bash`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.5%20User%20&%20Group%20Administration%20Labs.md#215310-switch-to-a-user-sudo--u-devops_user-bash)
+
 
 
 
