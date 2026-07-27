@@ -1223,15 +1223,13 @@
 
 ## 21.8 Systemd & Service Management Labs
 
-
-
 ### 21.8.1 Service Control Lab
 
-21.8.1.1 Check status of `ssh` service: `sudo systemctl status ssh`
+[21.8.1.1 Check status of `ssh` service: `sudo systemctl status ssh`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21811-check-status-of-ssh-service-sudo-systemctl-status-ssh)
 
-21.8.1.2 Stop the `cron` service: `sudo systemctl stop cron`
+[21.8.1.2 Stop the `cron` service: `sudo systemctl stop cron`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21812-stop-the-cron-service-sudo-systemctl-stop-cron)
 
-21.8.1.3 Start the `cron` service: `sudo systemctl start cron`
+[21.8.1.3 Start the `cron` service: `sudo systemctl start cron`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21813-start-the-cron-service-sudo-systemctl-start-cron)
 
 21.8.1.4 Restart the `nginx` service (if installed)
 
@@ -1241,17 +1239,15 @@
 
 21.8.1.7 Disable `nginx` from boot: `sudo systemctl disable nginx`
 
-21.8.1.8 List all active services: `systemctl list-units --type=service`
+[21.8.1.8 List all active services: `systemctl list-units --type=service`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21818-list-all-active-services-systemctl-list-units---typeservice)
 
-21.8.1.9 List all failed services: `systemctl --failed`
+[21.8.1.9 List all failed services: `systemctl --failed`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21819-list-all-failed-services-systemctl---failed)
 
-21.8.1.10 Check if service is enabled: `systemctl is-enabled ssh`
-
-
+[21.8.1.10 Check if service is enabled: `systemctl is-enabled ssh`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#218110-check-if-service-is-enabled-systemctl-is-enabled-ssh)
 
 ### 21.8.2 Creating a Custom Systemd Service
 
-21.8.2.1 Create a script `/usr/local/bin/myapp.sh` that writes timestamp to log
+[21.8.2.1 Create a script `/usr/local/bin/myapp.sh` that writes timestamp to log](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21821-create-a-script-usrlocalbinmyappsh-that-writes-timestamp-to-log)
 
 21.8.2.2 Create service file `/etc/systemd/system/myapp.service` with `ExecStart`
 
@@ -1271,31 +1267,27 @@
 
 21.8.2.10 Stop and disable the service, remove the script
 
-
-
 ### 21.8.3 Journalctl Lab
 
-21.8.3.1 View all journal logs: `journalctl`
+[21.8.3.1 View all journal logs: `journalctl`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21831-view-all-journal-logs-journalctl)
 
-21.8.3.2 View logs for specific service: `journalctl -u ssh`
+[21.8.3.2 View logs for specific service: `journalctl -u ssh`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21832-view-logs-for-specific-service-journalctl--u-ssh)
 
-21.8.3.3 Follow real-time logs: `journalctl -f`
+[21.8.3.3 Follow real-time logs: `journalctl -f`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21833-follow-real-time-logs-journalctl--f)
 
-21.8.3.4 View logs from last 10 minutes: `journalctl --since "10 minutes ago"`
+[21.8.3.4 View logs from last 10 minutes: `journalctl --since "10 minutes ago"`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21834-view-logs-from-last-10-minutes-journalctl---since-10-minutes-ago)
 
-21.8.3.5 View logs between specific times: `journalctl --since "09:00" --until "17:00"`
+[21.8.3.5 View logs between specific times: `journalctl --since "09:00" --until "17:00"`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21835-view-logs-between-specific-times-journalctl---since-0900---until-1700)
 
-21.8.3.6 View kernel logs: `journalctl -k`
+[21.8.3.6 View kernel logs: `journalctl -k`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21836-view-kernel-logs-journalctl--k)
 
-21.8.3.7 Show logs with priority ERROR only: `journalctl -p err`
+[21.8.3.7 Show logs with priority ERROR only: `journalctl -p err`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21837-show-logs-with-priority-error-only-journalctl--p-err)
 
-21.8.3.8 Show last 50 lines of SSH logs: `journalctl -u ssh -n 50`
+[21.8.3.8 Show last 50 lines of SSH logs: `journalctl -u ssh -n 50`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21838-show-last-50-lines-of-ssh-logs-journalctl--u-ssh--n-50)
 
-21.8.3.9 Check disk usage of journal: `journalctl --disk-usage`
+[21.8.3.9 Check disk usage of journal: `journalctl --disk-usage`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#21839-check-disk-usage-of-journal-journalctl---disk-usage)
 
-21.8.3.10 Rotate journal logs: `sudo journalctl --rotate`
-
-
+[21.8.3.10 Rotate journal logs: `sudo journalctl --rotate`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.8%20Systemd%20&%20Service%20Management%20Labs.md#218310-rotate-journal-logs-sudo-journalctl---rotate)
 
 ---
 
@@ -1303,43 +1295,39 @@
 
 ## 21.9 Cron & Scheduling Labs
 
-
-
 ### 21.9.1 Basic Cron Lab
 
-21.9.1.1 Open crontab for current user: `crontab -e`
+[21.9.1.1 Open crontab for current user: `crontab -e`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21911-open-crontab-for-current-user-crontab--e)
 
-21.9.1.2 Schedule a job to run every day at 2:30 AM
+[21.9.1.2 Schedule a job to run every day at 2:30 AM](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21912-schedule-a-job-to-run-every-day-at-230-am)
 
-21.9.1.3 Schedule a job to run every Monday at 5 PM
+[21.9.1.3 Schedule a job to run every Monday at 5 PM](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21913-schedule-a-job-to-run-every-monday-at-5-pm)
 
-21.9.1.4 Schedule a job to run every 15 minutes
+[21.9.1.4 Schedule a job to run every 15 minutes](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21914-schedule-a-job-to-run-every-15-minutes)
 
-21.9.1.5 Schedule a job to run at midnight on the first day of every month
+[21.9.1.5 Schedule a job to run at midnight on the first day of every month](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21915-schedule-a-job-to-run-at-midnight-on-the-first-day-of-every-month)
 
-21.9.1.6 List current crontab: `crontab -l`
+[21.9.1.6 List current crontab: `crontab -l`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21916-list-current-crontab-crontab--l)
 
-21.9.1.7 Remove all cron jobs: `crontab -r`
+[21.9.1.7 Remove all cron jobs: `crontab -r`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21917-remove-all-cron-jobs-crontab--r)
 
-21.9.1.8 Schedule a job that logs output to a file with timestamp
+[21.9.1.8 Schedule a job that logs output to a file with timestamp](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21918-schedule-a-job-that-logs-output-to-a-file-with-timestamp)
 
-21.9.1.9 Redirect stderr to stdout in cron command
+[21.9.1.9 Redirect stderr to stdout in cron command](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21919-redirect-stderr-to-stdout-in-cron-command)
 
-21.9.1.10 Use `@reboot` to run a script at system startup
+[21.9.1.10 Use `@reboot` to run a script at system startup](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#219110-use-reboot-to-run-a-script-at-system-startup)
 
-21.9.1.11 How Completed Cron Jobs Are Handled
-
-
+[21.9.1.11 How Completed Cron Jobs Are Handled](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#219111-how-completed-cron-jobs-are-handled)
 
 ### 21.9.2 System Cron Lab
 
 21.9.2.1 Edit system crontab: `sudo nano /etc/crontab`
 
-21.9.2.2 Add a job that runs as `root` user
+[21.9.2.2 Add a job that runs as `root` user](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21922-add-a-job-that-runs-as-root-user)
 
-21.9.2.3 Place a script in `/etc/cron.daily/` for daily execution
+[21.9.2.3 Place a script in `/etc/cron.daily/` for daily execution](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21923-place-a-script-in-etccrondaily-for-daily-execution)
 
-21.9.2.4 Check cron logs: `sudo tail -f /var/log/syslog | grep CRON`
+[21.9.2.4 Check cron logs: `sudo tail -f /var/log/syslog | grep CRON`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21924-check-cron-logs-sudo-tail--f-varlogsyslog--grep-cron)
 
 21.9.2.5 Test a failing cron job and debug with email/redirect
 
@@ -1349,10 +1337,9 @@
 
 21.9.2.8 Use wrapper script to ensure cron job doesn't run simultaneously
 
-21.9.2.9 Create lock file mechanism using `flock`
+[21.9.2.9 Create lock file mechanism using `flock`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.9%20Cron%20&%20Scheduling%20Labs.md#21929-create-lock-file-mechanism-using-flock)
 
 21.9.2.10 Verify cron service is running: `sudo systemctl status cron`
-
 
 
 ---
