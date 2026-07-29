@@ -1,6 +1,6 @@
 # File & Directory Operations
 
-## List
+## List (ls)
 
 ### Basic Listing
 - `ls` – List files and directories in the current folder.
@@ -21,28 +21,26 @@
 - `ls -r` – Reverse the sorting order for files and directories.
 
 
-### Pattern Matching (Globbing)
-
-#### File Extension Matching
+### File Extension Matching
 - `ls *.txt` – List files ending with `.txt`.
 - `ls *.[ch]` – List source files ending with `.c` or `.h`.
 - `ls *{jpg,png}` – List image files ending with `jpg` or `png`.
 
-#### Wildcard and Character Matching
+### Wildcard and Character Matching
 - `ls file?` – List files and directories with exactly one character after "file" (e.g., `file1`, `fileA`).
 - `ls [abc]*` – List files and directories starting with `a`, `b`, or `c`.
 
-#### Pattern Negation
+### Pattern Negation
 - `ls [!a]*` – List files and directories not starting with `a`.
 
-#### Directory & Hidden File Filters
+### Directory & Hidden File Filters
 - `ls -d */` – List directories only (excludes files).
 - `ls -d .[!.]*` – List hidden files and directories while excluding `.` and `..`.
 
 
 
 
-## Change Directory
+## Change Directory (cd)
 
 - `cd` – Change to the home directory.
 - `cd ~` – Change to the home directory.
@@ -56,7 +54,7 @@
 
 
 
-## Make Directory
+## Make Directory (mkdir)
 
 - `mkdir <dir>` – Create a single new directory in the current location.
 - `mkdir <dir1> <dir2> <dir3>` – Create multiple separate directories simultaneously.
@@ -69,10 +67,7 @@
 
 
 
-
-
-
-## Remove
+## Remove (rm)
 
 ### Basic File Removal
 - `rm <file>` – Remove a single file.
@@ -102,7 +97,7 @@
 
 
 
-## Copy
+## Copy(cp)
 
 - `cp <source_file> <dest_file>` – Copy a file to a new name or location.
 - `cp <file1> <file2> <file3> <dest_dir>` – Copy multiple files into a destination directory.
@@ -124,7 +119,7 @@
 
 
 
-## Move
+## Move (mv)
 
 - `mv <old_name> <new_name>` – Rename a file or directory to a new name within the same location.
 - `mv <source_file> <dest_dir>` – Move a file into a destination directory.
@@ -142,7 +137,7 @@
 
 
 
-## Link
+## Link (ln)
 
 ### Hard Links
 - `ln <target_file> <link_name>` – Create a hard link to a file (both names point directly to the same data on disk; deleting one name does not erase the actual data).
@@ -253,6 +248,217 @@
 - `chgrp <group> <target>` – Change the group ownership of a file or directory to a specific group.
 - `chgrp -R <group> <dir>` – Change the group ownership recursively for a directory and all of its contents.
 - `chgrp --reference=<ref_file> <target>` – Copy the exact group ownership configuration from a reference file to a target item.
+
+
+## SUID (4) , SGID (2) , Sticky Bit (1)
+
+### Set User ID (SUID)
+- `chmod u+s <file>` – Set SUID on an executable file so that any user running it temporary gains the privileges of the file's owner.
+- `chmod u-s <file>` – Remove SUID permission from an executable file.
+- `chmod 4755 <file>` – Set SUID via octal numeric mode (adds the leading `4`) along with standard `755` permissions.
+
+### Set Group ID (SGID)
+- `chmod g+s <dir>` – Set SGID on a directory so that all new files and subdirectories created inside it automatically inherit the group ID of the parent directory.
+- `chmod g+s <file>` – Set SGID on an executable file so that any user running it temporary gains the privileges of the file's group.
+- `chmod g-s <target>` – Remove SGID permission from a file or directory.
+- `chmod 2755 <dir>` – Set SGID via octal numeric mode (adds the leading `2`) along with standard `755` permissions.
+
+### Sticky Bit
+- `chmod +t <dir>` – Set the Sticky Bit on a shared directory (like `/tmp`) so that while any user can freely read, write, or create files inside it, they are strictly blocked from deleting, overwriting, or renaming files belonging to other users.
+- `chmod -t <dir>` – Remove the Sticky Bit permission from a directory, allowing anyone with write access to delete or modify any file inside it regardless of who owns it.
+- `chmod 1777 <dir>` – Set the Sticky Bit via octal numeric mode (adds the leading `1`) along with full public `777` permissions, creating a secure common folder where users can work together without risking accidental deletion of each other's data.
+
+### Combining Special Permissions
+- `chmod 6755 <target>` – Set both SUID (`4`) and SGID (`2`) permissions simultaneously via octal numeric mode (totals `6`).
+- `chmod 3755 <target>` – Set both SGID (`2`) and Sticky Bit (`1`) permissions simultaneously via octal numeric mode (totals `3`).
+- `chmod 7755 <target>` – Set SUID (`4`), SGID (`2`), and Sticky Bit (`1`) permissions all at once via octal numeric mode (totals `7`).
+
+
+
+
+
+
+## Managing Default File Creation Permissions (umask)
+
+- `umask` – View the current default permission mask value in octal format .
+- `umask <octal_mask>` – Set a new system creation mask value using octal numbers.
+  - *Example (`umask 022`):* Sets maximum directory permissions to `755` (`777 - 022`) and maximum file permissions to `644` (`666 - 022`), blocking group and public write access.
+  - *Example (`umask 077`):* Sets maximum directory permissions to `700` (`777 - 077`) and maximum file permissions to `600` (`666 - 077`), making all newly created items strictly private to the owner.
+- `umask u=<perms>,g=<perms>,o=<perms>` – Set the creation mask value using symbolic notation to explicitly specify allowed permissions for the owner, group, and others.
+  - `umask u=rwx,g=rx,o=` – Set the creation mask value using symbolic notation to allow full access for the owner (`rwx`), read and execute access for the group (`rx`), and zero access for other users.
+
+
+
+
+
+
+
+## Managing Access Control Lists (getfacl, setfacl)
+
+- `getfacl <file>` – View the detailed Access Control List permissions for a file, showing specific user and group access rules beyond standard Linux permissions.
+- `getfacl -R <dir>` – View the Access Control List permissions recursively for all files and subdirectories within a folder.
+
+### Setting and Modifying Permissions
+- `setfacl -m u:<user>:<perms> <file>` – Grant or modify explicit permissions (e.g., `rwx`) for a specific user on a file without changing the file's owner.
+- `setfacl -m g:<group>:<perms> <file>` – Grant or modify explicit permissions for a specific group on a file.
+- `setfacl -m u:<user>:<perms>,g:<group>:<perms> <file>` – Modify permissions for both a specific user and a specific group simultaneously on a single file.
+
+### Removing Permissions
+- `setfacl -x u:<user> <file>` – Remove the explicit Access Control List entry for a specific user from a file.
+- `setfacl -x g:<group> <file>` – Remove the explicit Access Control List entry for a specific group from a file.
+- `setfacl -b <file>` – Remove all extended Access Control List permissions from a file, reverting it entirely back to standard Linux permissions.
+
+
+
+---
+
+
+
+# Finding Files & Directories
+
+
+## Finding Files and Directories (find)
+
+### Basic Location and Name Matching
+- `find . -name "<file_name>"` – Find files and directories inside the current folder matching an exact name.
+- `find /path/to/search -iname "*<text>*"` – Find files and directories case-insensitively using wildcards anywhere in the name.
+- `find . -type f` – Find files only (excludes directories from the results).
+- `find . -type d` – Find directories only (excludes files from the results).
+
+### Filtering by Size and Time
+- `find . -size +100M` – Find files larger than 100 megabytes.
+- `find . -size -10k` – Find files smaller than 10 kilobytes.
+- `find . -mtime -7` – Find files modified within the last 7 days.
+- `find . -mtime +30` – Find files modified more than 30 days ago.
+
+### Filtering by Permissions and Ownership
+- `find . -perm 755` – Find files and directories with permissions set exactly to `755`.
+- `find . -user <username>` – Find files and directories owned by a specific user.
+
+
+
+
+## Updating and Searching the File Database (updatedb / locate)
+
+### Updating the Database
+- `sudo updatedb` – Update the system file database immediately (requires root privileges; necessary for the `locate` command to find recently created files).
+
+### Searching the Database
+- `locate <file_name>` – Search the database to instantly find the absolute path of a file or directory anywhere on the system.
+- `locate -i <file_name>` – Search the file database case-insensitively.
+
+
+
+
+
+--- 
+
+
+
+
+# Searching Text Inside Files [Global Regular Expression Print (grep)]
+
+### Basic Text Matching
+- `grep "<pattern>" <file>` – Search for a specific word or phrase inside a file and display all matching lines.
+- `grep "<pattern>" <file1> <file2>` – Search for a specific text pattern across multiple files simultaneously.
+- `grep -i "<pattern>" <file>` – Search for text case-insensitively, matching both uppercase and lowercase letters.
+- `grep -w "<pattern>" <file>` – Search for whole words only, ignoring matches where the text is part of a larger word.
+
+### Recursive and Location Matching
+- `grep -r "<pattern>" <dir>` – Search for a text pattern recursively through all files inside a directory.
+- `grep -l "<pattern>" <dir>/*` – List only the names of files that contain matching text, hiding the actual matching lines.
+- `grep -L "<pattern>" <dir>/*` – List only the names of files that do not contain the matching text.
+
+### Output Customization and Formatting
+- `grep -n "<pattern>" <file>` – Display the matching lines along with their corresponding line numbers in the file.
+- `grep -v "<pattern>" <file>` – Invert the search; display all lines that do not match the specified pattern.
+- `grep -c "<pattern>" <file>` – Display only the total count of matching lines found inside the file instead of the lines themselves.
+
+### Context-Based Matching
+- `grep -A <num> "<pattern>" <file>` – Display the matching line plus `<num>` lines of context *after* the match.
+- `grep -B <num> "<pattern>" <file>` – Display the matching line plus `<num>` lines of context *before* the match.
+- `grep -C <num> "<pattern>" <file>` – Display the matching line plus `<num>` lines of context both *before and after* the match.
+
+
+
+
+
+---
+
+
+
+
+# Process Management 
+
+### Viewing and Monitoring Processes
+- `ps` – View active processes running in the current terminal session.
+- `ps aux` – View detailed resource information for every active process running on the system across all users.
+- `ps -ef` – View a complete list of running processes with parent process IDs (PPIDs) in full format.
+- `top` – Open an interactive, real-time interface to monitor system resource usage, CPU, memory, and running processes.
+- `htop` – Open an advanced, color-coded, user-friendly interactive process viewer (requires installation).
+
+### Searching and Tracking Processes
+- `pgrep <process_name>` – Search for running processes by name and return only their Process IDs (PIDs).
+- `pgrep -l <process_name>` – Search for running processes by name and return both their PIDs and process names.
+- `ps aux | grep <process_name>` – Search and display detailed system-wide process lines matching a specific name.
+- `pidof <process_name>` – Find the exact numeric process ID of a running program by its exact name.
+- `pstree` – Display running processes in a visual tree diagram to show parent-child relationships.
+
+### Finding Resource and Port Locks
+- `lsof` – List all open files on the system and the processes currently using them.
+- `lsof -i :<port>` – Find the specific process currently using or blocking a network port (e.g., `lsof -i :8080`).
+- `fuser <file>` – Identify the Process ID of any program currently accessing a specific file or directory.
+- `fuser -k <file>` – Kill the process currently accessing a specific file or directory to free it up.
+
+### Termination and Signals
+- `kill <pid>` – Send a default `TERM` (15) signal to terminate a process gracefully using its Process ID.
+- `kill -9 <pid>` – Send a `KILL` (9) signal to force-quit a process immediately, bypassing any cleanup operations.
+- `kill -l` – List all available signal names and numbers that can be sent to processes.
+- `killall <process_name>` – Terminate all running instances of a process simultaneously by using its name instead of its PID.
+- `killall -9 <process_name>` – Force-terminate all running instances of a process simultaneously by name.
+- `pkill <pattern>` – Terminate processes based on a full or partial match of their name or command line.
+- `pkill -u <username>` – Terminate all active processes belonging to a specific user.
+
+### Process Priority (Nice Levels)
+- `nice -n <value> <command>` – Start a new process with a specific priority level (values range from -20 highest to 19 lowest).
+- `renice -n <value> -p <pid>` – Change the priority level of an already running process while it is active.
+
+### Background and Foreground Jobs
+- `jobs` – List all active background jobs running in the current shell session.
+- `<command> &` – Run a command in the background immediately, leaving the terminal free for other tasks.
+- `bg %<job_id>` – Resume a paused or stopped background job, keeping it running in the background.
+- `fg %<job_id>` – Bring a background job into the foreground, taking control of the active terminal session.
+- `nohup <command> &` – Run a command in the background that will continue running even if you log out or close the terminal.
+- `disown %<job_id>` – Remove a background job from the shell's active job table so it won't close when the shell exits.
+
+### Finding Shell Process IDs
+- `echo $$` – Display the Process ID (PID) of the currently active terminal shell session.
+- `echo $PPID` – Display the Parent Process ID (PPID) of the current shell session (typically the terminal emulator or SSH daemon).
+- `ps -p $$` – Display the active process details for the current shell session only.
+
+### Finding Parent Process Details
+- `ps -p $PPID` – Display process details for the parent application that launched the current shell.
+- `ps -o ppid= -p <pid>` – Print only the numeric parent process ID of a specific process, removing all headers.
+
+### Tracing System Calls and Processes (strace)
+- `strace <command>` – Run a command while intercepting and displaying all system calls, arguments, and return values made to the Linux kernel (e.g., `strace ls` to trace the file system calls made when listing a directory).
+- `strace -p <pid>` – Attach directly to a currently running process by its PID to trace its active system calls in real time (press `Ctrl+C` to detach).
+- `strace -c <command>` – Run a command and print a summary table of all system calls made, including execution time, call counts, and errors, instead of raw lines.
+- `strace -o <output_file> <command>` – Run a command and redirect the extensive system call trace log directly into a specific file.
+- `strace -e <system_call> <command>` – Trace only specific system calls during execution (e.g., `strace -e openat,readls` to monitor only file opening and reading).
+- `strace -f <command>` – Trace a process along with any child processes it creates or forks during execution.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
