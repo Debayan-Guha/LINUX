@@ -916,6 +916,9 @@
 
 [21.3.2.10 Start a process with lower priority using `nice`](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#213210-start-a-process-with-lower-priority-using-nice)
 
+[21.3.2.11 Verify the difference between a Job and multiple Processes using a pipeline](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#213211-verify-the-difference-between-a-job-and-multiple-processes-using-a-pipeline)
+
+
 ### 21.3.3 Process Debugging Lab
 
 [21.3.3.1 Write a simple Python script that runs an infinite loop](linux-labs/21.%20HANDS-ON%20LABS%20(DO%20THESE%20ON%20YOUR%20TERMINAL)/21.3%20Process%20Management%20Labs.md#21331-write-a-simple-python-script-that-runs-an-infinite-loop)
