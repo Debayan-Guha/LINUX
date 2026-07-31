@@ -1,4 +1,4 @@
-# File & Directory Operations
+# 1. File & Directory Operations
 
 ## List (ls)
 
@@ -155,7 +155,7 @@
 
 ---
 
-# File Viewing & Inspection
+# 2. File Viewing & Inspection
 
 
 ## Cat (concatenate)
@@ -228,7 +228,7 @@
 ---
 
 
-# Permissions & Ownership
+# 3. Permissions & Ownership
 
 
 ## Changing File and Directory Permissions (chmod)
@@ -314,7 +314,7 @@
 
 
 
-# Finding Files & Directories
+# 4. Finding Files & Directories
 
 
 ## Finding Files and Directories (find)
@@ -356,7 +356,7 @@
 
 
 
-# Searching Text Inside Files [Global Regular Expression Print (grep)]
+# 5. Searching Text Inside Files [Global Regular Expression Print (grep)]
 
 ### Basic Text Matching
 - `grep "<pattern>" <file>` – Search for a specific word or phrase inside a file and display all matching lines.
@@ -388,7 +388,7 @@
 
 
 
-# Process Management 
+# 6. Process Management 
 
 ### Viewing and Monitoring Processes
 - `ps` – View active processes running in the current terminal session.
@@ -457,7 +457,7 @@
 
 
 
-# MEMORY & DISK MANAGEMENT
+# 7. MEMORY & DISK MANAGEMENT
 
 ### Monitoring System Memory
 - `free` – View system memory usage (total, used, free, and swap space) in kilobytes by default.
@@ -509,7 +509,7 @@
 
 
 
-# USER & GROUP ADMINISTRATION
+# 8. USER & GROUP ADMINISTRATION
 
 ### Creating and Deleting
 - `sudo useradd <username>` – Create a new user account with default system settings (by default, it will not create a home directory on most systems unless configured otherwise in `/etc/login.defs`).
@@ -593,7 +593,7 @@
 ---
 
 
-# SERVICES & SYSTEMD
+# 9. SERVICES & SYSTEMD
 
 ### Controlling Service Runtime States
 - `sudo systemctl start <service_name>` – Start a background service immediately.
@@ -632,7 +632,7 @@
 
 
 
-# CRON & TASK SCHEDULING
+# 10. CRON & TASK SCHEDULING
 
 ### Managing User Cron Tables (crontab)
 - `crontab -e` – Open the current user's cron configuration file in the default terminal text editor to add, edit, or remove scheduled automated tasks.
@@ -664,7 +664,7 @@
 
 
 
-# Archiving and Compressing Files (tar)
+# 11. Archiving and Compressing Files (tar)
 
 ### Creating Archives
 - `tar -cvf <archive_name.tar> <file_or_dir>` – Create a standard uncompressed tarball archive of a specified file or directory while displaying progress in the terminal.
