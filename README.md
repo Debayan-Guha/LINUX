@@ -3,86 +3,17 @@
 
 ## 📋 Linux Cheatsheet Quick Reference
 
-File & Directory Operations
-  - [List (ls)](linux-cheetsheet.md#list-ls)
-  - [Change Directory (cd)](linux-cheetsheet.md#change-directory-cd)
-  - [Make Directory (mkdir)](linux-cheetsheet.md#make-directory-mkdir)
-  - [Remove (rm)](linux-cheetsheet.md#remove-rm)
-  - [Copy (cp)](linux-cheetsheet.md#copycp)
-  - [Move (mv)](linux-cheetsheet.md#move-mv)
-  - [Link (ln)](linux-cheetsheet.md#link-ln)
-
-File Viewing & Inspection
-  - [Cat (concatenate)](linux-cheetsheet.md#cat-concatenate)
-  - [Paged File Viewing](linux-cheetsheet.md#paged-file-viewing)
-  - [Beginning & End of Files](linux-cheetsheet.md#beginning--end-of-files)
-  - [Determining File Content Type (file)](linux-cheetsheet.md#determining-file-content-type-file)
-
-Permissions & Ownership
-  - [Changing File and Directory Permissions (chmod)](linux-cheetsheet.md#changing-file-and-directory-permissions-chmod)
-  - [Changing File and Directory Ownership (chown)](linux-cheetsheet.md#changing-file-and-directory-ownership-chown)
-  - [Changing Group Ownership (chgrp)](linux-cheetsheet.md#changing-group-ownership-chgrp)
-  - [SUID (4), SGID (2), Sticky Bit (1)](linux-cheetsheet.md#suid-4--sgid-2--sticky-bit-1)
-  - [Managing Default File Creation Permissions (umask)](linux-cheetsheet.md#managing-default-file-creation-permissions-umask)
-  - [Managing Access Control Lists (getfacl, setfacl)](linux-cheetsheet.md#managing-access-control-lists-getfacl-setfacl)
-
-Finding Files & Directories
-  - [Finding Files and Directories (find)](linux-cheetsheet.md#finding-files-and-directories-find)
-  - [Updating and Searching the File Database (updatedb / locate)](linux-cheetsheet.md#updating-and-searching-the-file-database-updatedb--locate)
-
-Searching Text Inside Files [Global Regular Expression Print (grep)]
-  - [Basic Text Matching](linux-cheetsheet.md#basic-text-matching)
-  - [Recursive and Location Matching](linux-cheetsheet.md#recursive-and-location-matching)
-  - [Output Customization and Formatting](linux-cheetsheet.md#output-customization-and-formatting)
-  - [Context-Based Matching](linux-cheetsheet.md#context-based-matching)
-
-Process Management
-  - [Viewing and Monitoring Processes](linux-cheetsheet.md#viewing-and-monitoring-processes)
-  - [Searching and Tracking Processes](linux-cheetsheet.md#searching-and-tracking-processes)
-  - [Finding Resource and Port Locks](linux-cheetsheet.md#finding-resource-and-port-locks)
-  - [Termination and Signals](linux-cheetsheet.md#termination-and-signals)
-  - [Process Priority (Nice Levels)](linux-cheetsheet.md#process-priority-nice-levels)
-  - [Background and Foreground Jobs](linux-cheetsheet.md#background-and-foreground-jobs)
-  - [Finding Shell Process IDs](linux-cheetsheet.md#finding-shell-process-ids)
-  - [Finding Parent Process Details](linux-cheetsheet.md#finding-parent-process-details)
-  - [Tracing System Calls and Processes (strace)](linux-cheetsheet.md#tracing-system-calls-and-processes-strace)
-
-Memory & Disk Management
-  - [Monitoring System Memory](linux-cheetsheet.md#monitoring-system-memory)
-  - [Real-Time Resource and Performance Monitoring](linux-cheetsheet.md#real-time-resource-and-performance-monitoring)
-  - [Clearing System Caches](linux-cheetsheet.md#clearing-system-caches)
-  - [Managing Swap Space (swapon, swapoff)](linux-cheetsheet.md#managing-swap-space-swapon-swapoff)
-  - [Monitoring Disk Space Usage](linux-cheetsheet.md#monitoring-disk-space-usage)
-  - [Listing and Managing Storage Devices](linux-cheetsheet.md#listing-and-managing-storage-devices)
-
-User & Group Administration
-  - [Creating and Deleting](linux-cheetsheet.md#creating-and-deleting)
-  - [Modifying Existing User Accounts](linux-cheetsheet.md#modifying-existing-user-accounts)
-  - [Securing User Accounts and Password Policies](linux-cheetsheet.md#securing-user-accounts-and-password-policies)
-  - [Customizing Account and Password Aging](linux-cheetsheet.md#customizing-account-and-password-aging)
-  - [Switching User Sessions (su, sudo)](linux-cheetsheet.md#switching-user-sessions-su-sudo)
-  - [Creating, Deleting, and Modifying Groups](linux-cheetsheet.md#creating-deleting-and-modifying-groups)
-  - [Inspecting User Login History](linux-cheetsheet.md#inspecting-user-login-history)
-  - [Auditing Active Users and Groups](linux-cheetsheet.md#auditing-active-users-and-groups)
-  - [Inspecting System Configuration Files](linux-cheetsheet.md#inspecting-system-configuration-files)
-  - [Editing and Verifying System Privilege Rules](linux-cheetsheet.md#editing-and-verifying-system-privilege-rules)
-
-Services & Systemd
-  - [Controlling Service Runtime States](linux-cheetsheet.md#controlling-service-runtime-states)
-  - [Configuring Automatic Service Boot Behaviors](linux-cheetsheet.md#configuring-automatic-service-boot-behaviors)
-  - [Inspecting Service and System States](linux-cheetsheet.md#inspecting-service-and-system-states)
-  - [Auditing Service Activity Logs (journalctl)](linux-cheetsheet.md#auditing-service-activity-logs-journalctl)
-
-Cron & Task Scheduling
-  - [Managing User Cron Tables (crontab)](linux-cheetsheet.md#managing-user-cron-tables-crontab)
-  - [Managing Rules for Other Users](linux-cheetsheet.md#managing-rules-for-other-users)
-  - [Auditing System-Wide Tasks and Schedules](linux-cheetsheet.md#auditing-system-wide-tasks-and-schedules)
-  - [Managing Access Restriction Rules](linux-cheetsheet.md#managing-access-restriction-rules)
-
-Archiving and Compressing Files (tar)
-  - [Creating Archives](linux-cheetsheet.md#creating-archives)
-  - [Extracting Archives](linux-cheetsheet.md#extracting-archives)
-  - [Inspecting and Filtering](linux-cheetsheet.md#inspecting-and-filtering)
+- [File & Directory Operations](linux-cheetsheet.md#1-file--directory-operations)
+- [File Viewing & Inspection](linux-cheetsheet.md#2-file-viewing--inspection)
+- [Permissions & Ownership](linux-cheetsheet.md#3-permissions--ownership)
+- [Finding Files & Directories](linux-cheetsheet.md#4-finding-files--directories)
+- [Searching Text Inside Files [Global Regular Expression Print (grep)]](linux-cheetsheet.md#5-searching-text-inside-files-global-regular-expression-print-grep)
+- [Process Management](linux-cheetsheet.md#6-process-management)
+- [Memory & Disk Management](linux-cheetsheet.md#7-memory--disk-management)
+- [User & Group Administration](linux-cheetsheet.md#8-user--group-administration)
+- [Services & Systemd](linux-cheetsheet.md#9-services--systemd)
+- [Cron & Task Scheduling](linux-cheetsheet.md#10-cron--task-scheduling)
+- [Archiving and Compressing Files (tar)](linux-cheetsheet.md#11-archiving-and-compressing-files-tar)
 
 
 ---
