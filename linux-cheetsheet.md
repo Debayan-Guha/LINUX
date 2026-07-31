@@ -452,6 +452,241 @@
 
 
 
+---
+
+
+
+
+# MEMORY & DISK MANAGEMENT
+
+### Monitoring System Memory
+- `free` – View system memory usage (total, used, free, and swap space) in kilobytes by default.
+- `free -h` – View system memory usage in a human-readable format (e.g., MB, GB) instead of raw byte counts.
+- `free -m` – Display total, used, and available system memory explicitly in megabytes.
+- `free -s <seconds>` – Continuously monitor and output system memory usage at a specified interval of `<seconds>`.
+
+### Real-Time Resource and Performance Monitoring
+- `vmstat` – Display system performance summaries including process counts, memory usage, swap activity, block I/O, and CPU statistics.
+- `vmstat <seconds> <count>` – Display system performance statistics continuously, updating every `<seconds>` interval for a total of `<count>` times before exiting automatically (e.g., `vmstat 2 5`).
+- `vmstat -s` – Display a comprehensive, static table of system memory counters and event statistics since the machine booted.
+- `top` – Open an interactive, real-time interface to monitor CPU, memory usage, and running processes.
+- `htop` – Open an advanced, color-coded, interactive process viewer that displays individual CPU core usage and memory bars visually (requires installation).
+
+### Clearing System Caches
+- `sudo sh -c 'echo 1 > /proc/sys/vm/drop_caches'` – Clear the system page cache from memory instantly without interrupting running services.
+- `sudo sh -c 'echo 2 > /proc/sys/vm/drop_caches'` – Clear system dentries (directory entries) and inodes from memory.
+- `sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'` – Clear page cache, dentries, and inodes simultaneously from memory.
+
+### Managing Swap Space (swapon, swapoff)
+- `swapon -s` – Display a summary list of all currently active swap space partitions and files on the system.
+- `sudo swapon -a` – Activate and enable all swap devices specified in the system configuration file (`/etc/fstab`).
+- `sudo swapoff -a` – Deactivate and disable all currently active swap spaces, shifting data back into physical RAM.
+
+### Monitoring Disk Space Usage 
+- `df` – Display disk space usage for all currently mounted file systems across the system.
+- `df -h` – Display disk space usage for all mounted file systems in an easy-to-read human-readable format (e.g., GB, TB).
+- `df -i` – Display total, used, and available inode counts for each mounted file system instead of byte capacity (crucial for checking if a disk is full due to too many small files).
+- `df -T` – Display disk space usage along with the specific file system type (e.g., ext4, xfs, vfat) for each mounted drive.
+- `du` – Calculate and display the space consumed by every file and directory in the current location.
+- `du -h` – Display calculated file and directory sizes in an easy-to-read human-readable format.
+- `du -sh` – Display strictly the single total size of the current directory, hiding the individual sizes of subdirectories inside it.
+- `du -sh *` – Calculate and display a summarized human-readable size for every individual file and folder inside the current directory.
+- `du -sh * | sort -h` – Calculate the sizes of all files and directories in the current location and sort them in ascending order by size using human-readable numbers (e.g., K, M, G).
+- `ncdu` – Open an interactive, text-based visual interface to navigate folders and quickly analyze which directories are consuming the most disk space (requires installation).
+
+### Listing and Managing Storage Devices
+- `lsblk` – List detailed information about all available block storage devices (hard drives, SSDs, partitions) in a visual tree format.
+- `lsblk -f` – List storage devices along with their file system types, labels, and unique UUIDs.
+- `fdisk -l` – List all connected storage drives, partition tables, sizes, and sector details (requires root privileges; e.g., `sudo fdisk -l`).
+- `sync` – Force the system to flush all cached data and unwritten blocks from memory directly onto the disk, ensuring data integrity before unmounting a drive.
+
+
+
+
+
+---
+
+
+
+
+# USER & GROUP ADMINISTRATION
+
+### Creating and Deleting
+- `sudo useradd <username>` – Create a new user account with default system settings (by default, it will not create a home directory on most systems unless configured otherwise in `/etc/login.defs`).
+- `sudo useradd -m -s <shell_path> <username>` – Create a standard user account with an automatically generated home directory, assigning a specific interactive login shell (e.g., `/bin/bash` for human users).
+- `sudo useradd -r -M -s <shell_path> <username>` – Create a highly secure system user account strictly for background services, explicitly forcing the system **not** to create a home directory while applying a low unique UID and a non-interactive shell (e.g., `/usr/sbin/nologin` to block system login).
+- `sudo userdel <username>` – Delete a user account from the system while leaving their home directory intact.
+- `sudo userdel -r <username>` – Delete a user account and completely remove their home directory and mail spool simultaneously.
+
+
+### Modifying Existing User Accounts
+- `sudo usermod -l <new_name> <old_name>` – Change the login name of an existing user to a new name.
+- `sudo usermod -d <new_home_path> -m <username>` – Change the user's home directory path and automatically move all existing files to the new location.
+- `sudo usermod -e <YYYY-MM-DD> <username>` – Set an absolute expiration date for a user account, after which the account becomes disabled.
+- `sudo usermod -L <username>` – Lock a user account to completely block them from logging in.
+- `sudo usermod -U <username>` – Unlock a previously locked user account to restore access.
+
+### Securing User Accounts and Password Policies
+- `passwd` – Change the login password for the currently logged-in user.
+- `sudo passwd <username>` – Change or reset the login password for a specific user account.
+- `sudo passwd -S <username>` – Check the current password status for a user, showing if the account is locked, cleared, or active.
+- `sudo passwd -e <username>` – Expire a user's password immediately, forcing them to change it upon their very next login.
+- `sudo passwd -l <username>` – Lock a user's password, instantly blocking them from authenticating via password.
+- `sudo passwd -u <username>` – Unlock a user's password, restoring their password-based login access.
+- `sudo passwd -d <username>` – Delete a user's password entirely, allowing them to log in without a password.
+
+### Customizing Account and Password Aging
+- `sudo chage -M <days> <username>` – Set the maximum number of days a password remains valid before forcing the user to change it.
+- `sudo chage -E <expiry_value> <username>` – Set or modify account expiration behavior using specific values (e.g., `-1` to set no expiry/remove restriction, or `0` to set immediate expiry and lock the account).
+- `sudo chage -d <day_value> <username>` – Change the date of the last password modification (e.g., setting `<day_value>` to `0` forces an absolute password change on the next login by marking the active password as expired).
+
+### Switching User Sessions (su, sudo)
+- `su` – Switch to the root user account, requiring the root password (does not load root's environment variables).
+- `su -` – Switch to the root user account while fully loading root's login environment variables, profile, and path setups.
+- `su <username>` – Switch session to a specific user account, requiring that user's password.
+- `su - <username>` – Switch session to a specific user account while fully loading their login environment variables.
+- `su -s <shell_path> <username>` – Switch session to a specific user account while forcing execution of an alternative shell.
+- `sudo -i` – Switch directly to the root user environment using your own user password (requires sudo privileges).
+- `sudo -u <username> <command>` – Execute a specific command as another user without switching the entire terminal session.
+
+
+### Creating, Deleting, and Modifying Groups
+- `sudo groupadd <group_name>` – Create a brand new user group on the system.
+- `sudo groupdel <group_name>` – Delete an existing user group (fails if the group is the primary group of any user).
+- `sudo usermod -g <primary_group> <username>` – Change a user's primary group configuration (applies to all newly created files).
+- `sudo usermod -aG <secondary_group> <username>` – Append a user to an additional secondary group without removing them from their existing groups (crucial for granting shared folder or `sudo` access).
+- `sudo gpasswd -d <username> <group_name>` – Remove a specific user from an active group membership.
+
+### Inspecting User Login History
+- `last` – Display a chronological list of all recent user logins and logouts, including source IP addresses, terminal ports, and session durations.
+- `last -n <count>` – Limit the login history output to the most recent `<count>` number of entries.
+- `lastb` – Display a log of all failed login attempts on the system (requires root access; essential for tracking brute-force attempts).
+- `lastlog` – Display the most recent login time for every user on the system, showing which accounts have never logged in.
+
+### Auditing Active Users and Groups
+- `id` – Display detailed user ID (UID), primary group ID (GID), and all secondary groups for the current active user.
+- `id <username>` – Display detailed UID, GID, and group assignments for a specific user account.
+- `who` – List all users currently logged into the system, including terminal lines and login times.
+- `whoami` – Display the username of the user currently logged into the active terminal session.
+- `w` – Display a detailed list of logged-in users along with their active processes and system resource usage.
+- `groups` – List all the groups the current user belongs to.
+- `groups <username>` – List all the groups a specific user belongs to.
+- `awk -F: '{print $1}' /etc/passwd` – List every single user account currently registered on the entire system.
+- `awk -F: '$3 >= 1000 && $3 != 65534 {print $1}' /etc/passwd` – List only standard/human user accounts registered on the system (filtering for standard UIDs).
+- `awk -F: '$3 < 1000 {print $1}' /etc/passwd` – List only the system/service user accounts registered on the system.
+
+### Inspecting System Configuration Files
+- `cat /etc/passwd` – View the system database containing user account names, UIDs, home directory paths, and default shells.
+- `cat /etc/shadow` – View the secure system file containing encrypted user passwords and account aging details (requires root access).
+- `cat /etc/group` – View the system database listing all defined groups and their respective members.
+- `sudo grep "<username>" /etc/shadow` – Search the secure system shadow file to verify encrypted password hashes, status flags, and aging limits for a specific user.
+
+
+### Editing and Verifying System Privilege Rules
+- `sudo visudo` – Open the `/etc/sudoers` privilege configuration file for editing with a built-in safety lock, preventing corruption by automatically checking for syntax errors before saving.
+- `sudo rm /etc/sudoers.d/<file_name>` – Delete a specific drop-in privilege rule file from the system to instantly revoke the commands assigned to that user or service.
+- `sudo visudo -f /etc/sudoers.d/<file_name>` – Open a drop-in rule file safely and clear all its lines to remove the rules without deleting the file entirely.
+- `sudo visudo -c` – Check the current `/etc/sudoers` file and all drop-in files inside `/etc/sudoers.d/` for syntax errors or invalid formatting without opening them.
+
+
+
+---
+
+
+# SERVICES & SYSTEMD
+
+### Controlling Service Runtime States
+- `sudo systemctl start <service_name>` – Start a background service immediately.
+- `sudo systemctl stop <service_name>` – Stop a running background service immediately.
+- `sudo systemctl restart <service_name>` – Stop and immediately restart a service (forces all active connections to drop and recreates process blocks).
+- `sudo systemctl reload <service_name>` – Reload a service's configuration files without stopping the service or dropping active client connections.
+
+### Configuring Automatic Service Boot Behaviors
+- `sudo systemctl enable <service_name>` – Configure a service to start automatically whenever the system boots up.
+- `sudo systemctl disable <service_name>` – Prevent a service from starting automatically at boot (the service can still be started manually).
+- `sudo systemctl mask <service_name>` – Permanently link a service's configuration file to `/dev/null`, blocking it from being started either automatically at boot or manually by other scripts or users.
+- `sudo systemctl unmask <service_name>` – Restore a previously masked service, allowing it to be started or enabled normally again.
+
+### Inspecting Service and System States
+- `systemctl status <service_name>` – Display detailed runtime information, active status flags, process tree mappings, and the most recent log entries for a specific service.
+- `systemctl is-active <service_name>` – Return a simple single-word string (e.g., `active` or `inactive`) confirming whether a service is currently running.
+- `systemctl is-enabled <service_name>` – Check whether a service is configured to run automatically at boot time.
+- `systemctl list-units --type=service` – List every active service currently loaded into the system's memory.
+- `systemctl list-unit-files --type=service` – List all installed services along with their current boot activation configurations (e.g., `enabled`, `disabled`, or `masked`).
+- `systemctl list-failed` – List all services that failed or crashed during system boot or runtime.
+
+### Auditing Service Activity Logs (journalctl)
+- `sudo journalctl -u <service_name>` – View all historical logs generated by a specific service.
+- `sudo journalctl -u <service_name> -f` – View and continuously track a service's logs in real time as new entries append (ideal for active debugging).
+- `sudo journalctl -u <service_name> --since "1 hour ago"` – Filter a service's log output to display entries from a specific timeframe.
+
+
+
+
+
+
+
+
+---
+
+
+
+
+# CRON & TASK SCHEDULING
+
+### Managing User Cron Tables (crontab)
+- `crontab -e` – Open the current user's cron configuration file in the default terminal text editor to add, edit, or remove scheduled automated tasks.
+- `crontab -l` – Display the active contents and scheduled rules of the current user's cron table on the terminal screen.
+- `crontab -r` – Delete the current user's complete cron table instantly, removing all scheduled tasks.
+- `crontab -i` – Prompt for an explicit confirmation before completely deleting the active cron table.
+
+### Managing Rules for Other Users
+- `sudo crontab -u <username> -e` – Open and edit the scheduled automated tasks for a specific user account on the system (requires root privileges).
+- `sudo crontab -u <username> -l` – View the scheduled tasks list belonging to a specific user account on the system.
+- `sudo crontab -u <username> -r` – Delete the entire cron table for a specific user account on the system.
+
+### Auditing System-Wide Tasks and Schedules
+- `ls -l /etc/cron.*` – List all system-managed cron directories that trigger tasks automatically at fixed intervals (`cron.hourly`, `cron.daily`, `cron.weekly`, `cron.monthly`).
+- `cat /etc/crontab` – View the master system-wide cron configuration file which contains system automation tasks along with explicit user specifications.
+- `sudo grep "cron" /var/log/syslog` – Search through system logs to trace cron execution history and check if automated tasks ran successfully or failed.
+
+### Managing Access Restriction Rules
+- `sudo cat /etc/cron.allow` – View the configuration file listing users who are explicitly allowed to create and manage scheduled cron jobs.
+- `sudo cat /etc/cron.deny` – View the configuration file listing users who are explicitly blocked from creating scheduled cron jobs.
+
+
+
+
+---
+
+
+
+
+
+
+# Archiving and Compressing Files (tar)
+
+### Creating Archives
+- `tar -cvf <archive_name.tar> <file_or_dir>` – Create a standard uncompressed tarball archive of a specified file or directory while displaying progress in the terminal.
+- `tar -czvf <archive_name.tar.gz> <file_or_dir>` – Create a compressed archive using **gzip** compression to reduce file size while displaying progress in the terminal.
+
+### Extracting Archives
+- `tar -xvf <archive_name.tar>` – Extract the entire contents of an uncompressed tarball archive into the current working directory.
+- `tar -xzvf <archive_name.tar.gz>` – Extract and decompress a **gzip** compressed archive into the current working directory.
+- `tar -xzvf <archive_name.tar.gz> -C <destination_dir>` – Extract and decompress an archive directly into a specific alternative directory instead of the current folder.
+
+### Inspecting and Filtering
+- `tar -tvf <archive_name.tar.gz>` – List the entire internal contents, files, and permissions of a compressed archive without actually extracting it to the disk.
+- `tar --exclude="<pattern>" -czvf <archive_name.tar.gz> <dir>` – Create a compressed archive of a directory while explicitly skipping specific files or subdirectories that match a pattern (e.g., excluding `node_modules` folders).
+
+
+
+
+
+
+
+
+
 
 
 
