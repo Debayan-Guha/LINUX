@@ -214,14 +214,22 @@
 
 
 
-
-
 ## Determining File Content Type (file)
 
 - `file <target>` – Determine the actual content type of a file or directory regardless of its file extension (e.g., ASCII text, JPEG image, ELF executable).
 - `file <file1> <file2> <file3>` – Determine the content types of multiple files simultaneously.
 - `file *` – Check the content type of every file and directory inside the current folder.
 - `file -z <compressed_file>` – Look inside compressed files (like `.gz` or `.z`) to determine the file type of the uncompressed data hidden inside them.
+
+
+
+## File and Directory Status Information (stat)
+
+- `stat <file_or_dir>` – Display detailed status information about a specific file or directory including size, permissions, timestamps, and inode details.
+- `stat <file1> <file2> <dir1>` – Display status information for multiple files and/or directories simultaneously.
+- `stat *` – View status information for all files and directories in the current folder.
+- `stat -f <file_or_dir>` – Display filesystem status information instead of file/directory status (shows block size, total blocks, free space, etc.).
+
 
 
 
