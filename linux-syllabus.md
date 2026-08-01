@@ -211,11 +211,11 @@
 
 ## 5.1 Memory Monitoring
 5.1.1 `free -h` (memory usage overview)  
-5.1.2 Understanding buffers vs cache  
+[5.1.2 Understanding buffers vs cache](linux-syllabus-sol/5.%20MEMORY%20%26%20DISK%20MANAGEMENT.md#512-understanding-buffers-vs-cache)  
 5.1.3 `vmstat` (virtual memory statistics)  
 5.1.4 `top`/`htop` memory columns  
 5.1.5 `/proc/meminfo` detailed analysis  
-5.1.6 Swap space usage and tuning  
+[5.1.6 Swap space usage and tuning](linux-syllabus-sol/5.%20MEMORY%20&%20DISK%20MANAGEMENT.md#516-swap-space-usage-and-tuning)
 5.1.7 OOM (Out-Of-Memory) killer behavior  
 
 ## 5.2 Disk Usage & Analysis
@@ -251,7 +251,7 @@
 
 ## 6.2 Group Management
 6.2.1 `groupadd`, `groupmod`, `groupdel`  
-6.2.2 Primary vs secondary groups  
+[6.2.2 Primary vs secondary groups](linux-syllabus-sol/6.%20USER%20%26%20GROUP%20ADMINISTRATION.md#622-primary-vs-secondary-groups)  
 6.2.3 Adding users to groups (`usermod -aG`)  
 6.2.4 `groups` command (show group membership)  
 6.2.5 `id` command (UID, GID, group info)  
