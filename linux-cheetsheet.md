@@ -544,6 +544,7 @@
 - `sudo passwd -d <username>` – Delete a user's password entirely, allowing them to log in without a password.
 
 ### Customizing Account and Password Aging
+- `sudo chage -l <username>` – Display detailed password aging information for a user, including last change date, password expiry, and account expiration.
 - `sudo chage -M <days> <username>` – Set the maximum number of days a password remains valid before forcing the user to change it.
 - `sudo chage -E <expiry_value> <username>` – Set or modify account expiration behavior using specific values (e.g., `-1` to set no expiry/remove restriction, or `0` to set immediate expiry and lock the account).
 - `sudo chage -d <day_value> <username>` – Change the date of the last password modification (e.g., setting `<day_value>` to `0` forces an absolute password change on the next login by marking the active password as expired).
